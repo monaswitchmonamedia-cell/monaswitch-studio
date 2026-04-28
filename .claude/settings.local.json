@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk -F'|' '{ if\\($1==prev_size\\){ print prev_name; print $2; print \"---\"} prev_size=$1; prev_name=$2 }')",
+      "Bash(ffmpeg -version)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(mkdir -p \"04_ASSETS/references_visuelles/theFIVE_frames\")",
+      "Bash(cp -n __TRACKED_VAR__/theFIVE.MP4 04_ASSETS/videos_brutes/)",
+      "Bash(cp -n __TRACKED_VAR__/hf_20260328_205158_bdf3ee66-ab18-4a51-9d10-34976cd46dae.mp4 04_ASSETS/videos_brutes/)",
+      "Bash(cp -n '__TRACKED_VAR__/AI Generated Video - Cinematic continuous tracking shot in one smooth t....mp4' 04_ASSETS/videos_brutes/)",
+      "Bash(cp -n '__TRACKED_VAR__/video-fb161097-86dd-414d-a8f0-67a46b4e33a6 \\(1\\).mp4' 04_ASSETS/videos_brutes/)",
+      "Bash(find . -maxdepth 1 -iname \"*logo*officiel*\" -o -iname \"logo officiel*\" -o -iname \"*LOGO OFFICIEL*\")",
+      "Bash(find . -maxdepth 1 -type f \\\\\\( -iname \"*logo*\" -o -iname \"*LOGO*\" \\\\\\))",
+      "Read(//c/Users/alain/.claude/skills/**)",
+      "Read(//c/Users/alain/.claude/plugins/**)",
+      "Read(//c/Users/alain/.claude/**)",
+      "Bash(npm ls *)",
+      "Read(//c/ffmpeg/bin/**)",
+      "Read(//c/Program Files/ffmpeg/bin/**)",
+      "Bash(where.exe ffmpeg *)",
+      "Bash(powershell.exe -NoProfile -Command \"[Environment]::GetEnvironmentVariable\\('Path','User'\\)\")",
+      "Bash(python)",
+      "Bash(claude mcp *)"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude mcp *)",
+      "Bash(cp \"C:\\\\Users\\\\alain\\\\.claude.json\" \"C:\\\\Users\\\\alain\\\\.claude.json.backup-cleanup-2026-04-28\")",
+      "Read(//c/Users/alain/**)",
+      "Bash(npm list *)",
+      "Bash(npx remotion *)",
+      "Bash(ffmpeg -version)",
+      "Bash(git lfs *)",
+      "Bash(uv --version)",
+      "Bash(npx -y skills add heygen-com/hyperframes)",
+      "Bash(npx -y skills add heygen-com/hyperframes -y -g)",
+      "Bash(npx -y skills add wuyoscar/gpt_image_2_skill -y -g)",
+      "Bash(npx -y skills add intellectronica/agent-skills -y -g)",
+      "Bash(git clone *)",
+      "Bash(wait)",
+      "Bash(bash ~/.claude/skills/claude-ads/install.sh)",
+      "Bash(npx hyperframes *)",
+      "Bash(ffprobe -v error -show_entries format=duration,size,bit_rate -show_entries stream=codec_name,width,height,r_frame_rate -of default=noprint_wrappers=1 \"G:/Mon Drive/MonaSwitch_Studio/01_PROJETS/06-monamedia/06_EXPORTS/9-16/pack-J1-manifesto-v1.mp4\")",
+      "mcp__gemini-ai__generate_image",
+      "Bash(ffprobe -v error -show_format -show_streams -of default 'G:/Mon Drive/MonaSwitch_Studio/01_PROJETS/06-monamedia/04_ASSETS/videos_brutes/theFIVE.MP4')",
+      "Bash(ffmpeg -i \"G:/Mon Drive/MonaSwitch_Studio/01_PROJETS/06-monamedia/04_ASSETS/videos_brutes/theFIVE.MP4\" -vf \"select='gt\\(scene,0.3\\)',showinfo\" -f null -)",
+      "Bash(ffmpeg -i \"G:/Mon Drive/MonaSwitch_Studio/01_PROJETS/06-monamedia/04_ASSETS/videos_brutes/theFIVE.MP4\" -af \"ebur128=peak=true\" -f null -)"
+    ]
+  }
+}
