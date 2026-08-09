@@ -1,0 +1,91 @@
+{
+  "input": "https://www.instagram.com/reel/DbOqNs0otjh/?igsh=MWc2dHBsZ3J5NjZ4bw==",
+  "input_type": "url",
+  "platform": "instagram",
+  "source_video": "[not committed publicly]",
+  "duration_seconds": 38.433,
+  "width": 1916,
+  "height": 1078,
+  "fps": 30.0,
+  "screens_even": [
+    {
+      "timestamp": 0.841,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-001-0000.84s.jpg"
+    },
+    {
+      "timestamp": 3.243,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-002-0003.24s.jpg"
+    },
+    {
+      "timestamp": 5.645,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-003-0005.64s.jpg"
+    },
+    {
+      "timestamp": 8.047,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-004-0008.05s.jpg"
+    },
+    {
+      "timestamp": 10.449,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-005-0010.45s.jpg"
+    },
+    {
+      "timestamp": 12.851,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-006-0012.85s.jpg"
+    },
+    {
+      "timestamp": 15.253,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-007-0015.25s.jpg"
+    },
+    {
+      "timestamp": 17.655,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-008-0017.66s.jpg"
+    },
+    {
+      "timestamp": 20.057,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-009-0020.06s.jpg"
+    },
+    {
+      "timestamp": 22.459,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-010-0022.46s.jpg"
+    },
+    {
+      "timestamp": 24.862,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-011-0024.86s.jpg"
+    },
+    {
+      "timestamp": 27.264,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-012-0027.26s.jpg"
+    },
+    {
+      "timestamp": 29.666,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-013-0029.67s.jpg"
+    },
+    {
+      "timestamp": 32.068,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-014-0032.07s.jpg"
+    },
+    {
+      "timestamp": 34.47,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-015-0034.47s.jpg"
+    },
+    {
+      "timestamp": 36.872,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/even/even-016-0036.87s.jpg"
+    }
+  ],
+  "screens_scenes": [
+    "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/scenes/scene-001.jpg",
+    "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/scenes/scene-002.jpg",
+    "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/scenes/scene-003.jpg",
+    "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/scenes/scene-004.jpg",
+    "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/scenes/scene-005.jpg",
+    "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/scenes/scene-006.jpg",
+    "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/scenes/scene-007.jpg",
+    "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/scenes/scene-008.jpg"
+  ],
+  "contact_sheet": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/screens/contact-sheet.jpg",
+  "audio": "[not committed publicly]",
+  "metadata": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00008/metadata/metadata.json",
+  "created_at": "2026-08-09T21:48:25.253811+00:00",
+  "original_url": "https://www.instagram.com/reel/DbOqNs0otjh/?igsh=MWc2dHBsZ3J5NjZ4bw=="
+}
