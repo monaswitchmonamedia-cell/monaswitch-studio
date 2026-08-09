@@ -1,0 +1,7 @@
+yt-dlp
+Pillow
+PyYAML
+opencv-python-headless
+numpy
+urllib3
+certifi
