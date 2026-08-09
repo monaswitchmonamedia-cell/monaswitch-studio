@@ -19,7 +19,14 @@ GPT-5.5 = cerveau stratégique : briefs, angles marketing, SEO/AEO/GEO, scripts,
 10. Ne jamais scanner, déplacer ou supprimer des fichiers personnels hors MonaSwitch_Studio sans instruction explicite.
 
 ## Skills Claude Code prioritaires
-frontend-design, playwright-skill, self-healing-claude, superpowers, security-review, skill-creator, researcher, MCP builder.
+frontend-design, playwright-skill, self-healing-claude, superpowers, security-review, skill-creator, researcher, MCP builder, analyze, videopower.
+
+## Orchestration vidéo
+
+- `/analyze` reste la source de vérité pour EXTRACT/REMIX, routage marque, charte, logos, CTA et conformité.
+- `/videopower` est la surcouche vidéo : URL/fichier → ingestion → screenshots/audio/métadonnées → `/analyze` → hooks/marketing/viral → `ANALYSE.md` → briefs covers A/B → distribution multi-RS → QA.
+- Ne jamais recréer `/analyze` dans `/videopower`.
+- Pour installer/synchroniser `/videopower`, utiliser `00_SYSTEM/SCRIPTS/Install-VideoPower.ps1`.
 
 ## Format de réponse obligatoire
 Répondre toujours avec : ce que j’ai compris, plan court, fichiers créés/modifiés, commandes à exécuter, contrôles qualité, prochaine action.
