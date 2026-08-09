@@ -1,7 +1,7 @@
 # MONASWITCH STUDIO — VIDEOPOWER STATUS
 
 Date de vérification : 2026-08-09
-Statut : **CONSTRUIT / REPO PRÉSENT / MOTEUR DISTANT TESTÉ**
+Statut : **CONSTRUIT / REPO PRÉSENT / INGEST LOCAL/URL DIRECT VALIDÉ / YOUTUBE GITHUB RUNNER À CORRIGER**
 
 ## Éléments vérifiés
 
@@ -11,7 +11,29 @@ Statut : **CONSTRUIT / REPO PRÉSENT / MOTEUR DISTANT TESTÉ**
 - Cheatsheet : `00_SYSTEM/CHEATSHEET_VIDEOPOWER.md`
 - Workflow distant : `.github/workflows/videopower-remote.yml`
 - Dossier des runs distants : `VIDEOPOWER_RUNS/`
-- Run de contrôle #5 : `INGEST_OK`
+- Run de contrôle #5 sur MP4 public direct : `INGEST_OK`
+
+## Validation du 09/08/2026 sur YouTube
+
+Deux tests ont été déclenchés sur `https://youtu.be/jlYbnWJf7HA` :
+
+- issue #6 avec le lien contenant le paramètre partagé par l'utilisateur ;
+- issue #7 avec l'URL YouTube canonique.
+
+Dans les deux cas, le runner GitHub a correctement passé :
+
+- checkout ;
+- Python 3.12 ;
+- installation FFmpeg ;
+- installation des dépendances VideoPower ;
+- lancement du provider PO-token ;
+- parsing de la demande.
+
+L'échec intervient uniquement à l'étape **Run deterministic ingest** pour YouTube.
+
+Conclusion : le pipeline VideoPower est bien construit, mais **la récupération directe YouTube depuis l'IP d'un runner GitHub n'est pas considérée comme validée**. YouTube peut bloquer ou challenger des IPs de datacenter même avec un provider PO-token. Le moteur local Claude Code reste la voie privilégiée pour les liens qui échouent sur GitHub Actions.
+
+Ne jamais annoncer « YouTube distant validé » tant qu'un run YouTube réel n'a pas retourné `INGEST_OK`.
 
 ## Rôle de /videopower
 
@@ -40,13 +62,14 @@ Statut : **CONSTRUIT / REPO PRÉSENT / MOTEUR DISTANT TESTÉ**
 
 Le workflow GitHub `VideoPower Remote Engine` installe automatiquement sur le runner :
 
-- Python 3.12
-- FFmpeg / FFprobe
-- dépendances `videopower`
-- yt-dlp
-- provider PO-token YouTube utilisé par le workflow
+- Python 3.12 ;
+- FFmpeg / FFprobe ;
+- dépendances `videopower` ;
+- yt-dlp ;
+- `bgutil-ytdlp-pot-provider` ;
+- provider PO-token YouTube.
 
-Il extrait les vidéos accessibles publiquement sans contourner les restrictions d'accès et commit uniquement screenshots + métadonnées, pas la vidéo/audio source.
+Il traite les contenus accessibles sans contourner les restrictions d'accès et commit uniquement screenshots + métadonnées, pas la vidéo/audio source.
 
 ## Installation locale Claude Code
 
@@ -90,4 +113,4 @@ claude --version
 
 ## Conclusion
 
-Le système `/videopower` existe déjà dans le repo et le moteur distant a déjà produit un run `INGEST_OK`. Le point qu'une nouvelle conversation doit vérifier séparément est uniquement l'installation locale dans `~/.claude/skills/` sur la machine Windows, car le repo ne permet pas de lire directement le disque local du PC.
+Le système `/videopower` existe déjà et ses fichiers sont persistés dans GitHub. Le run de contrôle sur une URL MP4 publique est `INGEST_OK`. Les tests YouTube du 09/08/2026 montrent que le runner GitHub distant peut être bloqué au téléchargement par YouTube ; cela ne remet pas en cause la skill ni l'ingestion locale. Une nouvelle conversation doit lire ce fichier avant de reconstruire ou réinstaller quoi que ce soit.
