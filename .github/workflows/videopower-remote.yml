@@ -31,13 +31,20 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install FFmpeg and Python dependencies
+      - name: Install FFmpeg and VideoPower dependencies
         shell: bash
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
           python -m pip install --upgrade pip
           python -m pip install -r 00_SYSTEM/SKILLS/videopower/requirements.txt
+
+      - name: Start YouTube PO-token provider
+        shell: bash
+        run: |
+          docker run --name bgutil-provider -d --init -p 4416:4416 brainicism/bgutil-ytdlp-pot-provider:1.3.1
+          sleep 3
+          docker ps --filter name=bgutil-provider
 
       - name: Parse request
         id: request
@@ -74,13 +81,44 @@ jobs:
           URL: ${{ steps.request.outputs.url }}
           OUTDIR: ${{ steps.request.outputs.outdir }}
         run: |
-          rm -rf "$OUTDIR"
-          python 00_SYSTEM/SKILLS/videopower/scripts/videopower_ingest.py \
-            "$URL" \
-            --output "$OUTDIR" \
-            --frames 16 \
-            --scene-threshold 0.30 \
-            --max-scenes 24
+          rm -rf "$OUTDIR" "${OUTDIR}_download"
+
+          if [[ "$URL" == *"youtube.com"* || "$URL" == *"youtu.be"* ]]; then
+            mkdir -p "${OUTDIR}_download"
+            yt-dlp \
+              --no-playlist \
+              --js-runtimes node \
+              --remote-components ejs:github \
+              --extractor-args "youtube:player_client=mweb" \
+              --write-info-json \
+              -f "bv*+ba/b" \
+              --merge-output-format mp4 \
+              -o "${OUTDIR}_download/source.%(ext)s" \
+              "$URL"
+
+            VIDEO_FILE=$(find "${OUTDIR}_download" -maxdepth 1 -type f \( -name '*.mp4' -o -name '*.webm' -o -name '*.mkv' -o -name '*.mov' \) | head -n 1)
+            if [[ -z "$VIDEO_FILE" ]]; then
+              echo "No downloaded YouTube video found" >&2
+              exit 1
+            fi
+
+            python 00_SYSTEM/SKILLS/videopower/scripts/videopower_ingest.py \
+              "$VIDEO_FILE" \
+              --output "$OUTDIR" \
+              --frames 16 \
+              --scene-threshold 0.30 \
+              --max-scenes 24
+
+            cp "${OUTDIR}_download"/*.info.json "$OUTDIR/metadata/" 2>/dev/null || true
+            rm -rf "${OUTDIR}_download"
+          else
+            python 00_SYSTEM/SKILLS/videopower/scripts/videopower_ingest.py \
+              "$URL" \
+              --output "$OUTDIR" \
+              --frames 16 \
+              --scene-threshold 0.30 \
+              --max-scenes 24
+          fi
 
       - name: Prepare public result bundle
         if: success()
@@ -91,7 +129,6 @@ jobs:
           PROJECT: ${{ steps.request.outputs.project }}
           ISSUE: ${{ steps.request.outputs.issue }}
         run: |
-          # Do not publish the full source video or extracted audio into the public repository.
           rm -rf "$OUTDIR/source" "$OUTDIR/audio"
           python - <<'PY'
           import json, os
@@ -102,6 +139,7 @@ jobs:
               data = json.loads(manifest_path.read_text(encoding='utf-8'))
               data['source_video'] = '[not committed publicly]'
               data['audio'] = '[not committed publicly]'
+              data['original_url'] = os.environ['URL']
               manifest_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
           run_md = f'''# VideoPower Remote Run\n\n- Issue: #{os.environ['ISSUE']}\n- Source URL: {os.environ['URL']}\n- Project hint: {os.environ['PROJECT']}\n- Status: INGEST_OK\n\n## Outputs\n\n- `screens/contact-sheet.jpg`\n- `screens/even/`\n- `screens/scenes/`\n- `metadata/metadata.json`\n- `manifest.json`\n\nThe source video and extracted audio are intentionally not committed to this public repository.\n'''
           (out / 'RUN.md').write_text(run_md, encoding='utf-8')
@@ -164,7 +202,7 @@ jobs:
               '❌ **VIDEPOWER_INGEST_FAILED**',
               '',
               'The remote engine could not retrieve or extract this video.',
-              'This can happen when the platform requires authentication, changes its anti-bot protections, or the link is not a directly supported public video.',
+              'The provider may require authentication or may have changed its anti-bot protections.',
               '',
               'No access restriction was bypassed.'
             ].join('\n');
