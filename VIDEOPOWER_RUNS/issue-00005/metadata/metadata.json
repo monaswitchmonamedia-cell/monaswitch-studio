@@ -1,0 +1,55 @@
+{
+  "input": "https://raw.githubusercontent.com/monaswitchmonamedia-cell/monaswitch-studio/main/01_PROJETS/06-monamedia/06_EXPORTS/9-16/pack-J1-manifesto-v1.mp4",
+  "input_type": "url",
+  "platform": "unknown",
+  "yt_dlp": {
+    "id": "pack-J1-manifesto-v1",
+    "title": "pack-J1-manifesto-v1",
+    "direct": true,
+    "url": "https://raw.githubusercontent.com/monaswitchmonamedia-cell/monaswitch-studio/main/01_PROJETS/06-monamedia/06_EXPORTS/9-16/pack-J1-manifesto-v1.mp4",
+    "ext": "mp4",
+    "webpage_url": "https://raw.githubusercontent.com/monaswitchmonamedia-cell/monaswitch-studio/main/01_PROJETS/06-monamedia/06_EXPORTS/9-16/pack-J1-manifesto-v1.mp4",
+    "webpage_url_basename": "pack-J1-manifesto-v1.mp4",
+    "webpage_url_domain": "raw.githubusercontent.com",
+    "extractor": "generic",
+    "extractor_key": "Generic",
+    "display_id": "pack-J1-manifesto-v1",
+    "fulltitle": "pack-J1-manifesto-v1",
+    "protocol": "https",
+    "video_ext": "mp4",
+    "audio_ext": "none",
+    "dynamic_range": "SDR",
+    "http_headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Accept-Language": "en-us,en;q=0.5",
+      "Sec-Fetch-Mode": "navigate"
+    },
+    "format_id": "0",
+    "format": "0 - unknown",
+    "epoch": 1786308910,
+    "_type": "video",
+    "_version": {
+      "version": "2026.07.04",
+      "release_git_head": "997fa140840a08df3938b40da470c78049fef1f6",
+      "repository": "yt-dlp/yt-dlp"
+    }
+  },
+  "ffprobe": {
+    "programs": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "30/1"
+      }
+    ],
+    "format": {
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "duration": "34.000000"
+    }
+  }
+}

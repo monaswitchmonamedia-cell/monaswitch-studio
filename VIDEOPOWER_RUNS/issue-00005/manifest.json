@@ -1,0 +1,84 @@
+{
+  "input": "https://raw.githubusercontent.com/monaswitchmonamedia-cell/monaswitch-studio/main/01_PROJETS/06-monamedia/06_EXPORTS/9-16/pack-J1-manifesto-v1.mp4",
+  "input_type": "url",
+  "platform": "unknown",
+  "source_video": "[not committed publicly]",
+  "duration_seconds": 34.0,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30.0,
+  "screens_even": [
+    {
+      "timestamp": 0.744,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-001-0000.74s.jpg"
+    },
+    {
+      "timestamp": 2.869,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-002-0002.87s.jpg"
+    },
+    {
+      "timestamp": 4.994,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-003-0004.99s.jpg"
+    },
+    {
+      "timestamp": 7.119,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-004-0007.12s.jpg"
+    },
+    {
+      "timestamp": 9.244,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-005-0009.24s.jpg"
+    },
+    {
+      "timestamp": 11.369,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-006-0011.37s.jpg"
+    },
+    {
+      "timestamp": 13.494,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-007-0013.49s.jpg"
+    },
+    {
+      "timestamp": 15.619,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-008-0015.62s.jpg"
+    },
+    {
+      "timestamp": 17.744,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-009-0017.74s.jpg"
+    },
+    {
+      "timestamp": 19.869,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-010-0019.87s.jpg"
+    },
+    {
+      "timestamp": 21.994,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-011-0021.99s.jpg"
+    },
+    {
+      "timestamp": 24.119,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-012-0024.12s.jpg"
+    },
+    {
+      "timestamp": 26.244,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-013-0026.24s.jpg"
+    },
+    {
+      "timestamp": 28.369,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-014-0028.37s.jpg"
+    },
+    {
+      "timestamp": 30.494,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-015-0030.49s.jpg"
+    },
+    {
+      "timestamp": 32.619,
+      "path": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/even/even-016-0032.62s.jpg"
+    }
+  ],
+  "screens_scenes": [
+    "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/scenes/scene-001.jpg"
+  ],
+  "contact_sheet": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/screens/contact-sheet.jpg",
+  "audio": "[not committed publicly]",
+  "metadata": "/home/runner/work/monaswitch-studio/monaswitch-studio/VIDEOPOWER_RUNS/issue-00005/metadata/metadata.json",
+  "created_at": "2026-08-09T20:55:08.841439+00:00",
+  "original_url": "https://raw.githubusercontent.com/monaswitchmonamedia-cell/monaswitch-studio/main/01_PROJETS/06-monamedia/06_EXPORTS/9-16/pack-J1-manifesto-v1.mp4"
+}
