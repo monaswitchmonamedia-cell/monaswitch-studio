@@ -23,10 +23,13 @@ frontend-design, playwright-skill, self-healing-claude, superpowers, security-re
 
 ## Orchestration vidéo
 
+- **Avant de recréer, réinstaller ou diagnostiquer `/videopower`, lire obligatoirement `00_SYSTEM/VIDEOPOWER_STATUS_2026-08-09.md` et `00_SYSTEM/CHEATSHEET_VIDEOPOWER.md`.**
 - `/analyze` reste la source de vérité pour EXTRACT/REMIX, routage marque, charte, logos, CTA et conformité.
 - `/videopower` est la surcouche vidéo : URL/fichier → ingestion → screenshots/audio/métadonnées → `/analyze` → hooks/marketing/viral → `ANALYSE.md` → briefs covers A/B → distribution multi-RS → QA.
 - Ne jamais recréer `/analyze` dans `/videopower`.
+- Ne jamais déclarer `/videopower` absent uniquement parce qu'une nouvelle conversation ne l'a pas en mémoire : vérifier le repo et le dossier local `~/.claude/skills/videopower/`.
 - Pour installer/synchroniser `/videopower`, utiliser `00_SYSTEM/SCRIPTS/Install-VideoPower.ps1`.
+- Le moteur GitHub distant peut subir des blocages provider/anti-bot sur certaines URL ; distinguer **pipeline installé** et **provider distant accessible**.
 
 ## Format de réponse obligatoire
 Répondre toujours avec : ce que j’ai compris, plan court, fichiers créés/modifiés, commandes à exécuter, contrôles qualité, prochaine action.
